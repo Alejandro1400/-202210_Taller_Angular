@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+ //TODO 2. Se importa el modulo en la app
 import { SeriesModule } from './series/series.module';
 
 @NgModule({
@@ -14,7 +16,10 @@ import { SeriesModule } from './series/series.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    //TODO 2. Se importa el modulo en la app
     SeriesModule,
+
     HttpClientModule
   ],
   providers: [],

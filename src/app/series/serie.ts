@@ -1,3 +1,5 @@
+//TODO 5. Se crea la clase que define la informacion de lo que se desea listar. Se usa Generate Class
+//Se definen los atributos y el constructor
 export class Serie {
 
   id: number;

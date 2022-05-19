@@ -4,7 +4,10 @@ import { Observable } from 'rxjs';
 import { Serie } from './serie';
 
 import { environment } from '../../environments/environment';
+import { SerieDetail } from './serie-detail';
 
+
+//TODO 10. Se crea un servicio, en el cual se define un metodo que hace un llamado de las series a partir del apiUrl que se encuentra
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +17,8 @@ export class SerieService {
 
   constructor(private http: HttpClient) { }
 
-  getSeries(): Observable<Serie[]> {
-    return this.http.get<Serie[]>(this.apiUrl);
+  getSeries(): Observable<SerieDetail[]> {
+    return this.http.get<SerieDetail[]>(this.apiUrl);
   }
 
 }

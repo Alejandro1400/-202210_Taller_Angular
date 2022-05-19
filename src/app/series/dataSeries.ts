@@ -1,3 +1,4 @@
+//TODO 7.Se crean unos datos de prueba
 import {Serie} from "./serie"
 
 export const DataSeries = [
