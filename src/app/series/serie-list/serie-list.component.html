@@ -3,20 +3,20 @@
     <div class="col-6">
       <table class="table">
         <thead>
-          <tr>
+          <tr id="titulo">
             <th class="h4">#</th>
             <th class="h4">Nombre</th>
             <th class="h4">Canal</th>
             <th class="h4">Temporadas</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="series">
           <tr *ngFor = "let s of series">
             <td>
               <dd>{{s.id}}</dd>
             </td>
             <td>
-              <dd (click)="onSelected(s)">{{s.name}}</dd>
+              <dd (click)="onSelected(s)" style="color:blue">{{s.name}}</dd>
             </td>
             <td>
               <dd>{{s.channel}}</dd>
@@ -25,12 +25,16 @@
               <dd>{{s.seasons}}</dd>
             </td>
           </tr>
-          <tr>
-            <td>Promedio Temporadas: {{promedioTemporada}}</td>
-          </tr>
         </tbody>
       </table>
     </div>
+    <br>
+    <div class="row">
+      <tr>
+        <td>Promedio Temporadas: {{promedioTemporada}}</td>
+      </tr>
+    </div>
+    
     <div class="col" *ngIf="selected">
       <app-serie-detail [serieDetail]="selectedSerie"></app-serie-detail>
     </div>

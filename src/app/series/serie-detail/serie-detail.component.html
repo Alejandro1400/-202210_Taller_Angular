@@ -1,29 +1,27 @@
-<div class="container-fluid">
-  <p class="h3 p-3">{{ serieDetail.name }}</p>
-  <div class="row">
-    <div class="col-2">
-      <div class="thumb">
-        <img
+<div class="col-mb2">
+  <div class="card p-2" style="width:10 rem; height:30 rem">
+    <img
           class="img-fluid"
           src="{{ serieDetail.poster }}"
           alt="{{ serieDetail.name }}"
         />
+      <div class="card-body">
+        <h5 class="card-title" style="font-weight:bold">{{ serieDetail.name }}</h5>
+        <div class="col">
+          <dl>
+            <dt class="bold" >Canal</dt>
+            <dd>{{serieDetail.channel}}</dd>
+            <hr />
+            <dt class="bold">Numero Temporadas</dt>
+            <dd>{{ serieDetail.seasons }}</dd>
+            <hr />
+            <dt class="bold">Descripcion</dt>
+            <dd>{{ serieDetail.description }}</dd>
+            <hr />
+            <dt class="bold">Webpage</dt>
+            <a href="{{ serieDetail.webpage }}"> Visit {{ serieDetail.webpage }}</a>
+          </dl>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <dl>
-        <dt class="bold">Canal</dt>
-        <dd>{{serieDetail.channel}}</dd>
-        <hr />
-        <dt class="bold">Numero Temporadas</dt>
-        <dd>{{ serieDetail.seasons }}</dd>
-        <hr />
-        <dt class="bold">Descripcion</dt>
-        <dd>{{ serieDetail.description }}</dd>
-        <hr />
-        <dt class="bold">Webpage</dt>
-        <a href="{{ serieDetail.webpage }}"> Visit {{ serieDetail.webpage }}</a>
-      </dl>
-    </div>
   </div>
  </div>
